@@ -21,7 +21,7 @@ The original developer injected several unwanted behaviors into the extension, w
 * **Refactored `app.js`:** The JavaScript code was cleaned up, optimized, and made more readable.
 * **Removed Dead Code:** Stripped out unused variables, functions, and legacy code.
 * **Improved UI/UX:** Ensured the background wallpaper changes smoothly and the widgets (Tasks, Notes, Pomodoro) function without glitches.
-
+![Preview](screenshot.png)
 ### 3. Privacy & Security
 * **No Remote Tracking:** The extension no longer pings external servers for updates or tracking.
 * **Local Storage Only:** All user data (tasks, notes, settings) is stored locally on the user's machine using `chrome.storage.local`. No data is sent to the original developer.
