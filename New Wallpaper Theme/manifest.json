@@ -10,9 +10,7 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": [
-    "storage"
-  ],
+  "permissions": ["storage", "tabs"],
   "icons": {
     "128": "img/128.png"
   },
