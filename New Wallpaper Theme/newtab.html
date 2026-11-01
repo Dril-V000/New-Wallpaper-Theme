@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="theme-dark">
+
+    <div id="wallpaper-layer-1" class="wp-layer active"></div>
+    <div id="wallpaper-layer-2" class="wp-layer"></div>
+    <div id="wallpaper-overlay"></div>
+
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <main id="sleek-dashboard">
+        <section class="dash-left">
+            <div class="sleek-widget clock-widget">
+                <h1 id="elegant-time">10:41</h1>
+                <h2 id="elegant-date">Sunday, March 8</h2>
+            </div>
+
+            <div class="spacer"></div>
+
+            <figure class="sleek-widget quote-widget">
+                <blockquote id="anime-quote">"If you don't take risks, you can't create a future."</blockquote>
+                <figcaption class="quote-author-line">
+                    <span class="line-dec"></span>
+                    <span id="anime-author">Monkey D. Luffy</span>
+                </figcaption>
+            </figure>
+        </section>
+
+        <aside class="dash-right">
+            <div class="widgets-stack">
+                <div class="sleek-widget pomodoro-widget">
+                    <div class="widget-header">
+                        <h3>Focus</h3>
+                        <div class="h-line"></div>
+                    </div>
+                    <div class="pomo-display" id="pomo-time">25:00</div>
+                    <p class="waifu-message" id="waifu-msg">Ready to begin.</p>
+                    <button id="pomo-toggle" class="sleek-btn">Start session</button>
+                </div>
+
+                <div class="sleek-widget quest-board">
+                    <div class="widget-header">
+                        <h3>Tasks</h3>
+                        <div class="h-line"></div>
+                    </div>
+                    <div class="quest-list" id="quest-list"></div>
+                    <button id="add-quest-btn" class="sleek-btn-ghost">+ Add task</button>
+                </div>
+
+                <div class="sleek-widget diary-widget">
+                    <div class="widget-header">
+                        <h3>Notes</h3>
+                        <div class="h-line"></div>
+                    </div>
+                    <textarea id="diary-text" placeholder="Write your thoughts..." spellcheck="false"></textarea>
+                </div>
+
+                <div class="sleek-widget dial-widget">
+                    <div class="dial-grid" id="bubble-dock"></div>
+                </div>
+            </div>
+
+            <div class="settings-panel">
+                <button id="open-settings-btn" class="icon-btn" title="Settings" aria-label="Settings"><span
+                        class="icon-txt">⚙</span></button>
+            </div>
+        </aside>
+    </main>
+
+    <div id="add-bubble-modal" class="sleek-modal hidden">
+        <div class="modal-content">
+            <h3>Add shortcut</h3>
+            <input type="text" id="bubble-name" placeholder="Name (e.g. YouTube)">
+            <input type="text" id="bubble-url" placeholder="URL (e.g. youtube.com)">
+            <div class="modal-actions">
+                <button id="cancel-bubble" class="sleek-btn-ghost">Cancel</button>
+                <button id="save-bubble" class="sleek-btn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings-modal" class="sleek-modal hidden">
+        <div class="modal-content">
+            <h3>Settings</h3>
+
+            <div class="setting-row">
+                <label for="setting-theme">Dark theme</label>
+                <label class="switch"><input type="checkbox" id="setting-theme"><span class="slider"></span></label>
+            </div>
+
+            <div class="setting-row">
+                <label for="setting-zen">Zen mode (hide UI)</label>
+                <label class="switch"><input type="checkbox" id="setting-zen"><span class="slider"></span></label>
+            </div>
+
+            <div class="setting-row">
+                <label for="setting-particles">Show particles</label>
+                <label class="switch"><input type="checkbox" id="setting-particles" checked><span class="slider"></span></label>
+            </div>
+
+            <div class="h-line divider"></div>
+
+            <div class="setting-row">
+                <label for="setting-clock">Show clock</label>
+                <label class="switch"><input type="checkbox" id="setting-clock" checked><span class="slider"></span></label>
+            </div>
+
+            <div class="setting-row">
+                <label for="setting-quote">Show quotes</label>
+                <label class="switch"><input type="checkbox" id="setting-quote" checked><span class="slider"></span></label>
+            </div>
+
+            <div class="setting-row">
+                <label for="setting-pomo">Show focus timer</label>
+                <label class="switch"><input type="checkbox" id="setting-pomo" checked><span class="slider"></span></label>
+            </div>
+
+            <div class="setting-row">
+                <label for="setting-quests">Show tasks</label>
+                <label class="switch"><input type="checkbox" id="setting-quests" checked><span class="slider"></span></label>
+            </div>
+
+            <div class="setting-row">
+                <label for="setting-diary">Show notes</label>
+                <label class="switch"><input type="checkbox" id="setting-diary" checked><span class="slider"></span></label>
+            </div>
+
+            <div class="setting-row">
+                <label for="setting-dial">Show shortcuts</label>
+                <label class="switch"><input type="checkbox" id="setting-dial" checked><span class="slider"></span></label>
+            </div>
+
+            <div class="setting-row last">
+                <button id="bg-shuffle" class="sleek-btn-ghost">Shuffle wallpaper</button>
+            </div>
+
+            <div class="modal-actions">
+                <button id="close-settings" class="sleek-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
